@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy Birthday, Chetha</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbeef0;--bg2:#f6d3da;--ink:#4a1626;--rose:#b3243f;--soft:#8a4457;--card:rgba(255,255,255,.72);--line:#e8b4c0;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#2a0d17;--bg2:#431324;--ink:#fbe6ea;--rose:#ff8fa5;--soft:#e7b0bc;--card:rgba(60,18,32,.72);--line:#7a3447}}
+:root[data-theme="dark"]{--bg:#2a0d17;--bg2:#431324;--ink:#fbe6ea;--rose:#ff8fa5;--soft:#e7b0bc;--card:rgba(60,18,32,.72);--line:#7a3447}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px 18px;
+background:radial-gradient(ellipse at 50% 0%,var(--bg2),var(--bg) 70%);background-color:var(--bg);color:var(--ink);
+font-family:'Nunito',system-ui,sans-serif;overflow-x:hidden}
+.card{position:relative;z-index:2;max-width:520px;width:100%;text-align:center;padding:44px 28px 36px;
+background:var(--card);border:1px solid var(--line);border-radius:28px;backdrop-filter:blur(6px)}
+.rose{font-size:64px;line-height:1;display:block;margin-bottom:6px;animation:bloom 1.6s ease-out both}
+@keyframes bloom{from{transform:scale(.2) rotate(-40deg);opacity:0}to{transform:none;opacity:1}}
+h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:clamp(40px,11vw,60px);line-height:1.05;margin:8px 0 4px;color:var(--rose)}
+.name{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:clamp(28px,8vw,38px);margin:0 0 22px}
+p{font-size:17px;line-height:1.75;color:var(--ink);margin:0 0 14px}
+.sign{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:22px;color:var(--soft);margin-top:20px}
+button{margin-top:22px;font:600 16px 'Nunito',sans-serif;color:#fff;background:var(--rose);border:0;border-radius:999px;padding:13px 26px;cursor:pointer}
+:root:not([data-theme="light"]) button{color:#2a0d17}
+button:focus-visible{outline:3px solid var(--soft);outline-offset:3px}
+[hidden]{display:none!important}
+.ghost{background:transparent;color:var(--rose);border:2px solid var(--rose)}
+:root:not([data-theme="light"]) .ghost{color:var(--rose)}
+.row{display:flex;flex-direction:column;gap:10px;align-items:center;margin-top:22px}
+.row button{margin-top:0}
+.bouq{width:min(300px,80%);height:auto;display:block;margin:0 auto 6px;animation:bloom 1.4s ease-out both;transform-origin:50% 90%}
+.rosebud{animation:pop .9s ease-out both;transform-box:fill-box;transform-origin:center}
+@keyframes pop{from{transform:scale(0)}to{transform:scale(1)}}
+.disc{width:150px;height:150px;border-radius:50%;margin:0 auto 14px;display:flex;align-items:center;justify-content:center;font-size:56px;background:radial-gradient(circle,var(--bg) 0 14%,var(--rose) 15% 100%);border:4px solid var(--line);animation:spin 6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.disc{animation:none}}
+a.btn{display:inline-block;text-decoration:none;font:600 16px 'Nunito',sans-serif;color:#fff;background:var(--rose);border-radius:999px;padding:13px 26px}
+:root:not([data-theme="light"]) a.btn{color:#2a0d17}
+body{padding-bottom:110px}
+.card::before,.card::after{content:"🌹 🌸 🌹 🌷 🌹 🌸 🌹";display:block;font-size:22px;letter-spacing:4px;white-space:nowrap;overflow:hidden}
+.card::before{margin-bottom:16px}
+.card::after{margin-top:22px}
+.flower{position:fixed;bottom:-6px;z-index:1;pointer-events:none;transform-origin:50% 100%;animation:sway ease-in-out infinite alternate}
+@keyframes sway{from{transform:rotate(-7deg)}to{transform:rotate(7deg)}}
+@media (prefers-reduced-motion:reduce){.flower{animation:none}}
+.petal{position:fixed;top:-8vh;z-index:1;pointer-events:none;animation:fall linear infinite}
+@keyframes fall{to{transform:translateY(112vh) rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.petal,.rose{animation:none}}
+</style>
+</head>
+<body>
+<main class="card">
+<span class="rose">🌹</span>
+<h1>Happy Birthday</h1>
+<div class="name">Chetha Kasundi</div>
+<p>On your special day, I wish you a life as beautiful as a garden of roses: soft mornings, sweet surprises, and love that blooms in every season.</p>
+<p>Thank you for being the kind of person who makes the world around her brighter. May this year bring you everything your heart has been quietly hoping for.</p>
+<p>You deserve every smile today, and so many more.</p>
+<div class="sign">With all my love 💗</div>
+<div class="row">
+<button id="g" type="button">Open your surprise gift 🎁</button>
+<button id="m" type="button">Play your birthday song 🎵</button>
+<button id="b" type="button" class="ghost">Send you roses 🌹</button>
+</div>
+</main>
+<main class="card" id="v2" hidden>
+<svg class="bouq" viewBox="0 0 300 340" role="img" aria-label="A bouquet of red roses">
+<defs><symbol id="r" viewBox="-30 -30 60 60"><circle r="28" fill="#c2314d"/><circle r="21" fill="#d94464"/><circle r="14" fill="#b3243f"/><path d="M0-8C8-8 9 2 0 4C-6 5-7-3-2-4" fill="none" stroke="#ff9fb2" stroke-width="2.5" stroke-linecap="round"/><circle r="28" fill="none" stroke="#8e1c33" stroke-width="2"/></symbol></defs>
+<g stroke="#3f7a4a" stroke-width="6" stroke-linecap="round"><line x1="150" y1="270" x2="150" y2="90"/><line x1="150" y1="270" x2="92" y2="130"/><line x1="150" y1="270" x2="208" y2="130"/><line x1="150" y1="270" x2="118" y2="182"/><line x1="150" y1="270" x2="182" y2="182"/></g>
+<g fill="#4e9a5b"><ellipse cx="58" cy="170" rx="26" ry="11" transform="rotate(-30 58 170)"/><ellipse cx="242" cy="170" rx="26" ry="11" transform="rotate(30 242 170)"/><ellipse cx="72" cy="96" rx="22" ry="9" transform="rotate(-55 72 96)"/><ellipse cx="228" cy="96" rx="22" ry="9" transform="rotate(55 228 96)"/></g>
+<g fill="#ffc2cf"><circle cx="48" cy="128" r="9"/><circle cx="252" cy="128" r="9"/><circle cx="150" cy="34" r="9"/><circle cx="110" cy="46" r="7"/><circle cx="190" cy="46" r="7"/></g>
+<use class="rosebud" href="#r" x="108" y="48" width="84" height="84" style="animation-delay:.3s"/>
+<use class="rosebud" href="#r" x="52" y="92" width="80" height="80" style="animation-delay:.5s"/>
+<use class="rosebud" href="#r" x="168" y="92" width="80" height="80" style="animation-delay:.7s"/>
+<use class="rosebud" href="#r" x="84" y="146" width="72" height="72" style="animation-delay:.9s"/>
+<use class="rosebud" href="#r" x="144" y="146" width="72" height="72" style="animation-delay:1.1s"/>
+<polygon points="78,205 222,205 166,328 134,328" fill="#f7c6d0" stroke="#d98ca0" stroke-width="2"/>
+<polygon points="150,205 222,205 166,328" fill="#efb0bf"/>
+<path d="M150 250C120 228 112 262 150 252C188 262 180 228 150 250Z" fill="#b3243f"/><circle cx="150" cy="251" r="6" fill="#8e1c33"/>
+</svg>
+<h1>Chetha Kasundi</h1>
+<div class="name">this bouquet is all yours 💐</div>
+<p>Every rose here carries a wish for you: joy, laughter, good health, and a heart that stays full all year long.</p>
+<div class="row">
+<button id="b2" type="button">Shower me with petals 🌹</button>
+<button id="back" type="button" class="ghost">Back to my wish</button>
+</div>
+</main>
+<main class="card" id="v3" hidden>
+<div class="disc" aria-hidden="true">🎵</div>
+<h1>Your song</h1>
+<div class="name">“Birthday” by Anne-Marie</div>
+<p>Chetha, this one is for you. Tap a button, press play, and let the day begin with a little dance. 💃</p>
+<div class="row">
+<a class="btn" href="https://www.youtube.com/results?search_query=Anne-Marie+Birthday" target="_blank" rel="noopener">Play on YouTube</a>
+<a class="btn" href="https://open.spotify.com/search/Anne-Marie%20Birthday" target="_blank" rel="noopener">Play on Spotify</a>
+<button id="back3" type="button" class="ghost">Back to my wish</button>
+</div>
+</main>
+<script>
+(function(){
+var E=['🌹','🌸','🌹','🥀','💗'];
+function drop(n){for(var i=0;i<n;i++){var s=document.createElement('span');s.className='petal';s.textContent=E[Math.floor(Math.random()*E.length)];
+s.style.left=Math.random()*100+'vw';s.style.fontSize=(16+Math.random()*20)+'px';
+s.style.animationDuration=(6+Math.random()*7)+'s';s.style.animationDelay=(Math.random()*5)+'s';s.style.opacity=.55+Math.random()*.45;
+document.body.appendChild(s);}}
+drop(18);
+var F=['🌹','🌷','🌸','🌺','🌹','🌻'];
+for(var k=0;k<12;k++){var f=document.createElement('span');f.className='flower';f.textContent=F[k%F.length];
+f.style.left=(k*8.4)+'vw';f.style.fontSize=(34+Math.random()*22)+'px';
+f.style.animationDuration=(2.5+Math.random()*2.5)+'s';f.style.animationDelay=(-Math.random()*3)+'s';document.body.appendChild(f);}
+document.getElementById('b').addEventListener('click',function(){drop(30);});
+document.getElementById('b2').addEventListener('click',function(){drop(30);});
+var v1=document.querySelector('main.card'),v2=document.getElementById('v2'),v3=document.getElementById('v3');
+function show(w){v1.hidden=(w!==false);v2.hidden=(w!==true);v3.hidden=(w!=='m');drop(w===false?0:40);window.scrollTo(0,0);}
+document.getElementById('m').addEventListener('click',function(){show('m');});
+document.getElementById('back3').addEventListener('click',function(){show(false);});
+document.getElementById('g').addEventListener('click',function(){show(true);});
+document.getElementById('back').addEventListener('click',function(){show(false);});
+})();
+</script>
+</body>
+</html>
